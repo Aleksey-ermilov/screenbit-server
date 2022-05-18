@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be9354d1-ff8e-4caa-8911-0cd7b16649dd" name="Default Changelist" comment="" />
+    <list default="true" id="be9354d1-ff8e-4caa-8911-0cd7b16649dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +16,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="27ypXHkb8uY6SRbFAfvsaEiTbWq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -22,7 +28,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tech-store-admin/client-admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
@@ -68,7 +74,8 @@
       <workItem from="1652727811832" duration="3396000" />
       <workItem from="1652775912889" duration="1166000" />
       <workItem from="1652792864470" duration="6470000" />
-      <workItem from="1652816870154" duration="2053000" />
+      <workItem from="1652816870154" duration="3526000" />
+      <workItem from="1652860810966" duration="41000" />
     </task>
     <servers />
   </component>
@@ -76,10 +83,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="776" y="240" width="424" height="484" key="FileChooserDialogImpl" timestamp="1652441795515">
+    <state x="776" y="240" width="424" height="484" key="FileChooserDialogImpl" timestamp="1652860846291">
       <screen x="67" y="27" width="1853" height="913" />
     </state>
-    <state x="776" y="240" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.913@67.27.1853.913" timestamp="1652441795515" />
+    <state x="776" y="240" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.913@67.27.1853.913" timestamp="1652860846291" />
     <state x="482" y="118" key="SettingsEditor" timestamp="1650442228898">
       <screen x="67" y="27" width="1853" height="913" />
     </state>
