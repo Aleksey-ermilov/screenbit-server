@@ -37,6 +37,8 @@ router.get('/cart', userController.getCart)
 router.get('/:id', userController.getUser)
 router.get('/orderstatus', checkUserMiddleware, userController.getOrderStatus)
 
+router.get('/checkserver',userController.checkServer)
+
 router.delete('/:id',userController.deleteUser)
 
 module.exports = router

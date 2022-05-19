@@ -659,6 +659,15 @@ class UserController {
             next(ApiError.badRequest(e.message))
         }
     }
+
+    async checkServer(req,res,next){
+        try {
+            res.json({mes:'ok'})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
+        }
+    }
 }
 
 module.exports = new UserController()
