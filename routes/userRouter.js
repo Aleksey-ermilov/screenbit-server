@@ -34,7 +34,7 @@ router.get('/activate/:id', userController.activate)
 router.get('/addresses', userController.getAddresses)
 router.get('/favorites', userController.getFavorites)
 router.get('/cart', userController.getCart)
-router.get('/:id', userController.getUser)
+router.get('/user/:id', userController.getUser)
 router.get('/orderstatus', checkUserMiddleware, userController.getOrderStatus)
 
 router.get('/checkserver',userController.checkServer)
