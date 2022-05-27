@@ -107,6 +107,7 @@ const Product_card = sequelize.define('product_card', {
     active: { type: DataTypes.BOOLEAN, defaultValue: true},
     new: { type: DataTypes.BOOLEAN, defaultValue: true},
     archive: { type: DataTypes.BOOLEAN, defaultValue: false},
+    warehouse_count: {type: DataTypes.STRING, allowNull: false},
     img: {
         type: DataTypes.TEXT,
         get() {

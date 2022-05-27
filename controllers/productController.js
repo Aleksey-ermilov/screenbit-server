@@ -1,5 +1,6 @@
 const uuid = require('uuid')
 const path = require('path')
+const fs = require('fs')
 const ApiError = require('../error/ApiError')
 const {Product_card} = require('../models/models')
 
@@ -10,18 +11,29 @@ class ProductController {
         try {
             // const {name,brand,price,category,desc,characteristics,accessories} = req.body
             const {img} = req.files
+            console.log('create',req.body)
+            // console.log('img',img)
 
+            // console.log('accessories',JSON.parse(req.body.accessories))
+            // console.log('characteristics',JSON.parse(req.body.characteristics))
             const arrImg = imgHandler(img)
 
-            const product_id = 'product_' + ((await Product_card.findAndCountAll()).count + 1)
+            const product_id = 'product_' + uuid.v4() //((await Product_card.findAndCountAll()).count + 1)
             const product = await Product_card.create({
-                ...req.body,product_id,img:arrImg,/*characteristics: JSON.stringify(req.body.characteristics)*/
+                ...req.body,
+                product_id,
+                img:arrImg,
+                accessories: req.body.accessories,
+                characteristics: req.body.characteristics,
+                warehouse_count: req.body.warehouseCount,
+                reviews: "[]"
+                /*characteristics: JSON.stringify(req.body.characteristics)*/
                     // name,brand,price,category,desc,characteristics,accessories,product_id,img:arrImg
                 // ...prod, product_id
                 })
 
             return res.json(product)
-            // return res.json(product_id)
+            // return res.json({mes:'ok'})
         }catch (e){
             console.log(e)
             next(ApiError.badRequest(e.message))
@@ -74,12 +86,80 @@ class ProductController {
         try {
             const {id} = req.params
 
+            const {dataValues: finderProduct} = await Product_card.findOne({where: {product_id: id} })
+            const finderProductImg = JSON.parse(finderProduct.img)
+            finderProductImg.forEach(item => {
+                fs.unlink(path.resolve(__dirname,'..','static',item), (err) => {
+                    if (err) throw err;
+                    console.log('successfully deleted',item);
+                })
+            })
+
             const product = await Product_card.destroy({where:{product_id: id}})
 
             res.json({product})
         }catch (e){
             console.log(e)
             next(ApiError.internal())
+        }
+    }
+
+    async updateProduct (req,res,next) {
+        try {
+            const {product} = req.body
+            // const {user_id} = req.user
+
+            const newProduct = {
+                ...product,
+                characteristics: JSON.stringify(product.characteristics),
+                accessories: JSON.stringify(product.accessories),
+                reviews: JSON.stringify(product.reviews)
+            }
+
+            await Product_card.update({...newProduct},{where:{product_id:product.product_id}})
+
+            res.json({product})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
+        }
+    }
+
+    async fullUpdateProduct (req,res,next) {
+        try {
+            // const {user_id} = req.user
+
+            let arrImg = []
+            if (req.files) {
+                arrImg = imgHandler(req.files.newImg)
+            }
+
+            const {dataValues: finderProduct} = await Product_card.findOne({where: {product_id: req.body.product_id} })
+            const finderProductImg = JSON.parse(finderProduct.img)
+            const oldImg = JSON.parse(req.body.oldImg)
+            finderProductImg.forEach(item => {
+                const i = oldImg.find(thing => item === thing)
+                if (!i){
+                    fs.unlink(path.resolve(__dirname,'..','static',item), (err) => {
+                        if (err) console.log('err',err);
+                        console.log('successfully deleted',item);
+                    })
+                }
+            })
+            // oldImg.forEach( item => arrImg.unshift(item))
+            console.log(arrImg)
+
+            const newProduct = {
+                ...req.body,
+                img: [...oldImg, ...arrImg],
+            }
+
+            await Product_card.update({...newProduct},{where:{product_id:req.body.product_id}})
+
+            res.json({newProduct})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
         }
     }
 
