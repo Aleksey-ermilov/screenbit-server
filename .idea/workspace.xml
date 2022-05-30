@@ -2,59 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be9354d1-ff8e-4caa-8911-0cd7b16649dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/adminController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/adminRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/adminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/adminController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/productController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/productController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/models.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/productRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/productRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/01abbad0-c274-4de8-bb85-38161c9a66fe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/0b25316f-e8e2-4a15-8323-325ee1ae7203.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/0bd6a1c8-200b-4867-9dc5-7f75b780d41e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/121f5d70-c0aa-4ff0-b813-1bae453412e6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/18c5c196-5c90-4092-8990-80f319c9556c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/19621846-fcec-4b12-9340-c5c6d9036d23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/1abd5d22-4b92-4a35-9e03-7053459b33be.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/1dcc4a92-9072-42a2-94ca-9ece4350d3ea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/20718d94-3a11-4505-8f46-5c71a2a8864c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/2745f3a0-90b0-480a-8bcf-b8b2a4ed5df4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/2db37961-2ed7-472c-abd5-99ce469e713a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/31ac5051-4a7d-4e23-ba68-810f85a5f1e9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/330e19b2-16c3-4f5b-86a4-5cd847cd1e5e.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/37c942b9-b8cb-4273-bb6c-73b9953c3cd0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/463eaa11-302c-4b95-8490-ceafdb177374.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/4c8c1f38-4e44-450a-a6ac-089effdced96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/4e7a38c4-02ae-4edb-9979-49464b1f2254.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/5780a20e-ec73-4edb-9d4d-ad4bcd4d756c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/5b12f5b6-786c-4ea0-b766-5680e41e1867.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/60b265dc-d86a-4a5c-a2d1-f6eb8fb70c51.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/71298a84-4eb4-4499-8b48-04c15bfdb086.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/74977cfd-e433-4d25-8362-98e1201baddc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/767eff63-0e77-47a2-81cb-d7e913373a44.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/83bd3545-2ba5-43c2-8ae2-95ef9ac3c268.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/8fb7ff5e-b33a-42a8-a8f5-b7234466eb4a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/8ff9e186-d133-425b-a85e-14a0abfc118b.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/95dc5d19-3459-471d-b900-28cd18de2088.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/9e33e524-ea05-4076-86bc-05bd737c276a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/a5517104-1d72-4718-81d7-dc0c39463589.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ac0524fe-4de3-452d-a5c0-4173dd8778e5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/b0f2d0e0-ac0f-48c6-89c4-b80c8d2fe282.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/b1ce6838-d236-41a9-81e1-5666c09f476b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/b430f3b1-a67c-416b-98ce-47d731306a2d.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/b4851ff4-743f-4187-9366-a1516d703553.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/b6b3f392-c36f-4cd4-b6bd-b8eff6e477b4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bb4f0eea-86c4-4d74-af8c-c147e3d19e70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bd28fcfc-0c54-4922-99c0-2356141b99f0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/beb0e30c-e74d-4ed2-a86c-0082242bedac.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bfc9e39c-19f3-4704-8119-8cdd72c37f1d.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/c2cd8f25-ca11-4034-94fb-e3578d9c0697.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/cac7374b-291f-4470-9bee-ebe4b5a0745a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/e4fe1d7d-a19a-4adc-82a2-68949b9cc6a8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/e9c584a0-327e-4b15-9af7-70c2c2581edd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/ef04ce0b-dcda-4066-aaba-0814f90444dc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/fa2c93b4-fe86-44f7-a5c0-c3ea3dc9ec78.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/adminRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/adminRouter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +90,10 @@
       <workItem from="1653489265088" duration="598000" />
       <workItem from="1653558644461" duration="8233000" />
       <workItem from="1653591188104" duration="1485000" />
-      <workItem from="1653639396961" duration="1182000" />
+      <workItem from="1653639396961" duration="2431000" />
+      <workItem from="1653829642160" duration="3672000" />
+      <workItem from="1653849561407" duration="604000" />
+      <workItem from="1653898215740" duration="677000" />
     </task>
     <servers />
   </component>
@@ -145,14 +101,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="67" y="31" width="912" height="909" key="CommitChangelistDialog2" timestamp="1652950779606">
+    <state x="67" y="31" width="912" height="909" key="CommitChangelistDialog2" timestamp="1653662210585">
       <screen x="67" y="27" width="1853" height="913" />
     </state>
-    <state x="67" y="31" width="912" height="909" key="CommitChangelistDialog2/67.27.1853.913@67.27.1853.913" timestamp="1652950779606" />
-    <state x="776" y="240" width="424" height="484" key="FileChooserDialogImpl" timestamp="1653639405412">
+    <state x="67" y="31" width="912" height="909" key="CommitChangelistDialog2/67.27.1853.913@67.27.1853.913" timestamp="1653662210585" />
+    <state x="776" y="240" width="424" height="484" key="FileChooserDialogImpl" timestamp="1653898230022">
       <screen x="67" y="27" width="1853" height="913" />
     </state>
-    <state x="776" y="240" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.913@67.27.1853.913" timestamp="1653639405412" />
+    <state x="776" y="240" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.913@67.27.1853.913" timestamp="1653898230022" />
     <state x="482" y="118" key="SettingsEditor" timestamp="1650442228898">
       <screen x="67" y="27" width="1853" height="913" />
     </state>

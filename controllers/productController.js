@@ -108,7 +108,7 @@ class ProductController {
         try {
             const {product} = req.body
             // const {user_id} = req.user
-
+            console.log('product',product)
             const newProduct = {
                 ...product,
                 characteristics: JSON.stringify(product.characteristics),
@@ -118,7 +118,7 @@ class ProductController {
 
             await Product_card.update({...newProduct},{where:{product_id:product.product_id}})
 
-            res.json({product})
+            res.json({newProduct})
         }catch (e){
             console.log(e)
             next(ApiError.badRequest(e.message))

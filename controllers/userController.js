@@ -594,6 +594,7 @@ class UserController {
                 status: 'Заказ принят',
                 date_repair: null,
                 delivery_date: null,
+                price: ''
             }
 
             const repair_status = [...user.repair_status,rep]
