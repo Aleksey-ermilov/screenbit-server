@@ -1,4 +1,4 @@
-const {User,Messages} = require('../models/models')
+const {User,Messages,Clients,Mutualization,Shop} = require('../models/models')
 const ApiError = require('../error/ApiError')
 
 class AdminController{
@@ -50,6 +50,76 @@ class AdminController{
             })
 
             res.json({list})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
+        }
+    }
+
+    async createClients(req,res,next){
+        try {
+            const {client} = req.body
+            console.log(client)
+            const newClient = await Clients.create(client)
+
+            res.json({newClient})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
+        }
+    }
+
+    async getClients(req,res,next){
+        try {
+            const clients = await Clients.findAll()
+
+            res.json({clients:clients.reverse()})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
+        }
+    }
+
+    async createMutualization(req,res,next){
+        try {
+            const {mutualization} = req.body
+            const newMutualization = await Mutualization.create(mutualization)
+
+            res.json({newMutualization})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
+        }
+    }
+
+    async getMutualization(req,res,next){
+        try {
+            const mutualization = await Mutualization.findAll()
+
+            res.json({mutualization: mutualization.reverse()})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
+        }
+    }
+
+    async createShop(req,res,next){
+        try {
+            const {shop} = req.body
+            const newShop = await Shop.create(shop)
+
+            res.json({newShop})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
+        }
+    }
+
+    async getShop(req,res,next){
+        try {
+            const shop = (await Shop.findAll())
+
+            res.json({shop:shop.reverse()})
         }catch (e){
             console.log(e)
             next(ApiError.badRequest(e.message))

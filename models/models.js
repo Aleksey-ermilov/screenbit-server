@@ -195,8 +195,42 @@ const Messages_Repair = sequelize.define('messages_repair', {
     charset: 'utf8'
 })
 
+// времено !!!!!!!
+const Clients = sequelize.define('clients', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    name: {type: DataTypes.STRING},
+    email: {type: DataTypes.STRING},
+    phone: {type: DataTypes.STRING},
+    address: {type: DataTypes.STRING},
+},{
+    charset: 'utf8'
+})
+
+// времено !!!!!!!
+const Mutualization = sequelize.define('mutualization', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    name: {type: DataTypes.STRING},
+    weOwe: {type: DataTypes.STRING},
+    weShould: {type: DataTypes.STRING},
+    balance: {type: DataTypes.STRING},
+},{
+    charset: 'utf8'
+})
+
+// времено !!!!!!!
+const Shop = sequelize.define('shop', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+    shop_id: {type: DataTypes.STRING},
+    date: {type: DataTypes.STRING},
+    employees: {type: DataTypes.STRING},
+    warehouse: {type: DataTypes.STRING},
+    summa: {type: DataTypes.STRING},
+},{
+    charset: 'utf8'
+})
+
 module.exports = {
-    User,Product_card,Messages,Messages_Repair
+    User,Product_card,Messages,Messages_Repair,Clients,Mutualization,Shop
 }
 
 /*
