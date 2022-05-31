@@ -22,7 +22,7 @@ class AdminController{
             let user = await User.findAll()
             user = user.filter(item => item.order_status.length)
             user = user.map( item => {
-                return item.order_status.filter(fil => fil.status !== 'Заказ выполнин').map(thing => ({...thing,user_id:item.user_id,phone:item.phone,email:item.email}))
+                return item.order_status.filter(fil => fil.status !== 'Заказ выполнен').map(thing => ({...thing,user_id:item.user_id,phone:item.phone,email:item.email}))
             })
             let list = []
             user.forEach(item => {
@@ -49,7 +49,7 @@ class AdminController{
             })
             await User.update({order_status:updateOrders},{where:{user_id: order.user_id}})
 
-            if(order.status === 'Заказ выполнин'){
+            if(order.status === 'Заказ выполнен'){
                 const newShop = await Shop.create({
                     shop_id: order.order_id,
                     date: Date(order.dateReady),
@@ -72,7 +72,7 @@ class AdminController{
             user = user.filter(item => item.repair_status.length)
 
             user = user.map( item => {
-                return item.repair_status.map(thing => ({...thing,user_id:item.user_id,phone:item.phone,email:item.email}))
+                return item.repair_status.filter(fil => fil.status !== 'Заказ выполнен').map(thing => ({...thing,user_id:item.user_id,phone:item.phone,email:item.email}))
             })
             let list = []
             user.forEach(item => {
@@ -88,8 +88,29 @@ class AdminController{
     async updateRepairOrder(req,res,next){
         try {
             const {repair} = req.body
-            // const user = await User.findOne({ where:{user_id: repair.user_id} })
+            const user = await User.findOne({ where:{user_id: repair.user_id} })
             // console.log(user.order_status)
+
+
+            let updateRepairOrder = user.repair_status.map(item => {
+                if(item.repair_id === repair.repair_id){
+                    return repair
+                }
+                return item
+            })
+            // console.log('updateRepairOrder',updateRepairOrder)
+            await User.update({repair_status:updateRepairOrder},{where:{user_id: repair.user_id}})
+
+            if(repair.status === 'Заказ выполнен'){
+                const newShop = await Shop.create({
+                    shop_id: repair.repair_id,
+                    date: Date(repair.dateReady),
+                    employees: repair.employees,
+                    warehouse: repair.warehouse,
+                    summa: Number(repair.price.replace(/[^\d]/g, ''))
+                })
+            }
+
             res.json({repair})
         }catch (e){
             console.log(e)
