@@ -22,7 +22,7 @@ class AdminController{
             let user = await User.findAll()
             user = user.filter(item => item.order_status.length)
             user = user.map( item => {
-                return item.order_status.map(thing => ({...thing,user_id:item.user_id,phone:item.phone,email:item.email}))
+                return item.order_status.filter(fil => fil.status !== 'Заказ выполнин').map(thing => ({...thing,user_id:item.user_id,phone:item.phone,email:item.email}))
             })
             let list = []
             user.forEach(item => {
@@ -30,6 +30,36 @@ class AdminController{
             })
 
             res.json({list})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
+        }
+    }
+
+    async updateOrdering(req,res,next){
+        try {
+            const {order} = req.body
+            const user = await User.findOne({ where:{user_id: order.user_id} })
+
+            let updateOrders = user.order_status.map(item => {
+                if(item.order_id === order.order_id){
+                    return order
+                }
+                return item
+            })
+            await User.update({order_status:updateOrders},{where:{user_id: order.user_id}})
+
+            if(order.status === 'Заказ выполнин'){
+                const newShop = await Shop.create({
+                    shop_id: order.order_id,
+                    date: Date(order.dateReady),
+                    employees: order.employees,
+                    warehouse: order.warehouse,
+                    summa: Number(order.price.replace(/[^\d]/g, '')) * order.count
+                })
+            }
+
+            res.json({order})
         }catch (e){
             console.log(e)
             next(ApiError.badRequest(e.message))
@@ -50,6 +80,17 @@ class AdminController{
             })
 
             res.json({list})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
+        }
+    }
+    async updateRepairOrder(req,res,next){
+        try {
+            const {repair} = req.body
+            // const user = await User.findOne({ where:{user_id: repair.user_id} })
+            // console.log(user.order_status)
+            res.json({repair})
         }catch (e){
             console.log(e)
             next(ApiError.badRequest(e.message))

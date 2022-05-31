@@ -6,6 +6,8 @@ router.post('/', adminController.login)
 router.post('/clients', adminController.createClients)
 router.post('/mutualization', adminController.createMutualization)
 router.post('/shop', adminController.createShop)
+router.post('/ordering', adminController.updateOrdering)
+router.post('/repairOrder', adminController.updateRepairOrder)
 
 router.get('/', adminController.checkServer)
 router.get('/ordering', adminController.getOrdering)
