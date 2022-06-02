@@ -400,7 +400,25 @@ class UserController {
             let {img: images} = user
 
             const newImg = imgSave(img)
-            images = [ ...images, newImg ]
+            images = [ newImg,...images ]
+
+            await User.update({img:images},{where:{user_id}})
+
+            res.json({img:images})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
+        }
+    }
+
+    async changeImg(req,res,next){
+        try {
+            const {newImg,user_id} = req.body
+
+            const {dataValues: user} = await User.findOne({where:{user_id}})
+            let {img: images} = user
+
+            images = [newImg,...images.filter(item => item !== newImg) ]
 
             await User.update({img:images},{where:{user_id}})
 
