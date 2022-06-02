@@ -22,7 +22,7 @@ class AdminController{
             let user = await User.findAll()
             user = user.filter(item => item.order_status.length)
             user = user.map( item => {
-                return item.order_status.filter(fil => fil.status !== 'Заказ выполнен').map(thing => ({...thing,user_id:item.user_id,phone:item.phone,email:item.email}))
+                return item.order_status.filter(fil => fil.status !== 'Заказ выполнен' && fil.status !== 'Заказ выполнин').map(thing => ({...thing,user_id:item.user_id,phone:item.phone,email:item.email}))
             })
             let list = []
             user.forEach(item => {
@@ -72,7 +72,7 @@ class AdminController{
             user = user.filter(item => item.repair_status.length)
 
             user = user.map( item => {
-                return item.repair_status.filter(fil => fil.status !== 'Заказ выполнен').map(thing => ({...thing,user_id:item.user_id,phone:item.phone,email:item.email}))
+                return item.repair_status.filter(fil => fil.status !== 'Заказ выполнен' && fil.status !== 'Заказ выполнин').map(thing => ({...thing,user_id:item.user_id,phone:item.phone,email:item.email}))
             })
             let list = []
             user.forEach(item => {
