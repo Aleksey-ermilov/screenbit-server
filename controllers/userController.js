@@ -141,7 +141,7 @@ class UserController {
             }
         }catch (e){
             console.log(e)
-            next(ApiError.badRequest(e.message))
+            next(ApiError.badRequest('Ошибка при авторизации'))
         }
     }
 
@@ -354,6 +354,22 @@ class UserController {
                 id: uuid.v4()
             }
             const newAddresses = [...user.addresses,newAddress]
+            await User.update({addresses: newAddresses},{where:{user_id}})
+
+            res.json({addresses:newAddresses})
+        }catch (e){
+            console.log(e)
+            next(ApiError.badRequest(e.message))
+        }
+    }
+
+    async changeAddresses(req,res,next){
+        try {
+            const {address,user_id} = req.body
+
+            const { dataValues: user} = await User.findOne({where:{user_id}})
+
+            const newAddresses = [address,...user.addresses.filter(item=> item.id !== address.id)]
             await User.update({addresses: newAddresses},{where:{user_id}})
 
             res.json({addresses:newAddresses})

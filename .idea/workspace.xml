@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="be9354d1-ff8e-4caa-8911-0cd7b16649dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/userRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/userRouter.js" afterDir="false" />
     </list>
@@ -95,7 +96,8 @@
       <workItem from="1653935744222" duration="3276000" />
       <workItem from="1653983659941" duration="10254000" />
       <workItem from="1654071304389" duration="2044000" />
-      <workItem from="1654156476313" duration="2964000" />
+      <workItem from="1654156476313" duration="6981000" />
+      <workItem from="1654245472978" duration="1444000" />
     </task>
     <servers />
   </component>
@@ -103,14 +105,14 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="67" y="31" width="1676" height="909" key="CommitChangelistDialog2" timestamp="1654157108745">
+    <state x="67" y="31" width="1676" height="909" key="CommitChangelistDialog2" timestamp="1654164078305">
       <screen x="67" y="27" width="1853" height="913" />
     </state>
-    <state x="67" y="31" width="1676" height="909" key="CommitChangelistDialog2/67.27.1853.913@67.27.1853.913" timestamp="1654157108745" />
-    <state x="776" y="240" width="424" height="484" key="FileChooserDialogImpl" timestamp="1654156486567">
+    <state x="67" y="31" width="1676" height="909" key="CommitChangelistDialog2/67.27.1853.913@67.27.1853.913" timestamp="1654164078305" />
+    <state x="776" y="240" width="424" height="484" key="FileChooserDialogImpl" timestamp="1654245479821">
       <screen x="67" y="27" width="1853" height="913" />
     </state>
-    <state x="776" y="240" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.913@67.27.1853.913" timestamp="1654156486567" />
+    <state x="776" y="240" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.913@67.27.1853.913" timestamp="1654245479821" />
     <state x="482" y="118" key="SettingsEditor" timestamp="1650442228898">
       <screen x="67" y="27" width="1853" height="913" />
     </state>
